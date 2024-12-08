@@ -38,6 +38,13 @@ Rsyslog - это очень быстрый, расширяемый сервис 
 
 Подобные уровни лога поддерживаются в большинстве программ, которые ведут логи.
 
+
+![image](https://github.com/user-attachments/assets/29c1e8fd-5c98-45c7-aa0c-a5513ce31200)
+
+![image](https://github.com/user-attachments/assets/26dd1f58-01ad-4e9c-b5db-a2b8ff23ad41)
+
+
+
 ## [[⬆]](#toc) <a name='3'>Настройка сервера</a>
 
 ## [[⬆]](#toc) <a name='4'>Настройка клиента</a>
