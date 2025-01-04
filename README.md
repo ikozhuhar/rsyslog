@@ -80,9 +80,43 @@ Rsyslog - это очень быстрый, расширяемый сервис 
 
 ![image](https://github.com/user-attachments/assets/26dd1f58-01ad-4e9c-b5db-a2b8ff23ad41)
 
+![image](https://github.com/user-attachments/assets/dbd82585-3132-44a4-83da-ee0ec741f1fa)
+
+![image](https://github.com/user-attachments/assets/369311cd-be21-4260-b23f-c749053a6c0d)
+
+![image](https://github.com/user-attachments/assets/66cd6896-9db9-4fce-a4e0-0d5942e83fee)
 
 
 ## [[⬆]](#toc) <a name='4'>Настройка сервера</a>
+
+```
+apt -a list rsyslog
+```
+Настраиваем конфигурационный фалй rsyslog /etc/rsyslog.conf
+
+![image](https://github.com/user-attachments/assets/1921d192-470e-4cf7-86f1-9f5c2acd4ce0)
+
+Открываем порт 514 (TCP и UDP):
+
+```
+# provides UDP syslog reception
+module(load="imudp")
+input(type="imudp" port="514")
+
+# provides TCP syslog reception
+module(load="imtcp")
+input(type="imtcp" port="514")
+
+```
+
+![image](https://github.com/user-attachments/assets/e4274e51-0e49-4cf1-97f0-ab5e83b48e36)
+
+
+
+
+
+
+
 
 ## [[⬆]](#toc) <a name='5'>Настройка клиента</a>
 
