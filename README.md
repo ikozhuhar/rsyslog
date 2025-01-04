@@ -94,22 +94,15 @@ apt -a list rsyslog
 ```
 Настраиваем конфигурационный фалй rsyslog /etc/rsyslog.conf
 
-![image](https://github.com/user-attachments/assets/1921d192-470e-4cf7-86f1-9f5c2acd4ce0)
+![image](https://github.com/user-attachments/assets/e4274e51-0e49-4cf1-97f0-ab5e83b48e36)
 
 Открываем порт 514 (TCP и UDP):
 
 ```
-# provides UDP syslog reception
-module(load="imudp")
-input(type="imudp" port="514")
-
-# provides TCP syslog reception
-module(load="imtcp")
-input(type="imtcp" port="514")
-
+nano /etc/rsyslog.conf
 ```
 
-![image](https://github.com/user-attachments/assets/e4274e51-0e49-4cf1-97f0-ab5e83b48e36)
+![image](https://github.com/user-attachments/assets/1921d192-470e-4cf7-86f1-9f5c2acd4ce0)
 
 
 
