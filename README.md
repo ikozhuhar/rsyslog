@@ -80,12 +80,6 @@ Rsyslog - это очень быстрый, расширяемый сервис 
 
 ![image](https://github.com/user-attachments/assets/26dd1f58-01ad-4e9c-b5db-a2b8ff23ad41)
 
-![image](https://github.com/user-attachments/assets/dbd82585-3132-44a4-83da-ee0ec741f1fa)
-
-![image](https://github.com/user-attachments/assets/369311cd-be21-4260-b23f-c749053a6c0d)
-
-![image](https://github.com/user-attachments/assets/66cd6896-9db9-4fce-a4e0-0d5942e83fee)
-
 
 ## [[⬆]](#toc) <a name='4'>Настройка сервера</a>
 
@@ -136,6 +130,23 @@ systemctl restart rsyslog
 
 
 ## [[⬆]](#toc) <a name='5'>Настройка клиента</a>
+
+Установка и настройка сервера Nginx
+
+![image](https://github.com/user-attachments/assets/dbd82585-3132-44a4-83da-ee0ec741f1fa)
+
+![image](https://github.com/user-attachments/assets/369311cd-be21-4260-b23f-c749053a6c0d)
+
+![image](https://github.com/user-attachments/assets/66cd6896-9db9-4fce-a4e0-0d5942e83fee)
+
+Настраиваем конфигурационный файл сервра
+
+```
+nano /etc/nginx/nginx.conf
+```
+
+![image](https://github.com/user-attachments/assets/6635f8f5-2e6a-4baf-b080-bc2dc39b7751)
+
 
 ## [[⬆]](#toc) <a name='6'>Чтение логов на сервере</a>
 
