@@ -104,7 +104,31 @@ nano /etc/rsyslog.conf
 
 ![image](https://github.com/user-attachments/assets/1921d192-470e-4cf7-86f1-9f5c2acd4ce0)
 
+В конец файла /etc/rsyslog.conf добавляем правила приёма сообщений от хостов:
 
+```
+# Add remote logs
+$template RemoteLogs,"/var/log/rsyslog/%HOSTNAME%/%PROGRAMNAME%.log"
+*.* ?RemoteLogs
+& ~
+```
+
+![image](https://github.com/user-attachments/assets/fb7d389e-1592-4929-b0d1-25c94ede7912)
+
+
+Данные параметры будут отправлять в папку /var/log/rsyslog логи, которые будут приходить от других серверов. Например, Access-логи nginx от сервера web, будут идти в файл /var/log/rsyslog/web/nginx_access.log
+
+Далее сохраняем файл и перезапускаем службу rsyslog: systemctl restart rsyslog
+
+```
+systemctl restart rsyslog
+```
+
+![image](https://github.com/user-attachments/assets/5cbc2062-3cad-4591-862b-13cf130495ef)
+
+Смотрим результат. Должны быть открыты порты 514 TCP,UDP
+
+![image](https://github.com/user-attachments/assets/9013f428-6a66-4597-bef7-9ca45c1c69bb)
 
 
 
