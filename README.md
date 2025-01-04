@@ -133,6 +133,10 @@ systemctl restart rsyslog
 
 Установка и настройка сервера Nginx
 
+```
+apt install -y nginx
+```
+
 ![image](https://github.com/user-attachments/assets/dbd82585-3132-44a4-83da-ee0ec741f1fa)
 
 ![image](https://github.com/user-attachments/assets/369311cd-be21-4260-b23f-c749053a6c0d)
