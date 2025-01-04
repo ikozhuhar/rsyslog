@@ -151,12 +151,39 @@ nano /etc/nginx/nginx.conf
 
 ![image](https://github.com/user-attachments/assets/6635f8f5-2e6a-4baf-b080-bc2dc39b7751)
 
+```
+nginx -t
+```
+![image](https://github.com/user-attachments/assets/682bb18c-7b43-4ad2-a33a-86ff5dd3b6db)
+
+```
+systemctl restart nginx
+systemctl status nginx
+```
+
+![image](https://github.com/user-attachments/assets/772e9c2f-dd75-49d3-aee7-8174c860ad45)
+
+```
+mv /var/www/html/index.nginx-debian.html  /var/
+```
+
+![image](https://github.com/user-attachments/assets/660d6289-53b6-4b92-a6a2-bf4d2f635ba7)
+
+
 
 ## [[⬆]](#toc) <a name='6'>Чтение логов на сервере</a>
 
 
+![image](https://github.com/user-attachments/assets/876658f1-9315-4028-b7ad-39462bdfdb4a)
 
 
+![image](https://github.com/user-attachments/assets/df442d97-98cc-4b33-b4b8-53df643cafba)
+
+```
+cat ./web/nginx_error.log
+```
+
+![image](https://github.com/user-attachments/assets/9984bdeb-e7b2-4345-adc2-3fe61ca28512)
 
 
 
