@@ -83,7 +83,7 @@ Rsyslog - это очень быстрый, расширяемый сервис 
 
 ### 4. [[⬆]](#toc) <a name='4'>Настройка сервера</a>
 
-```
+```ruby
 # Смотрим информацию о пакете rsyslog
 apt -a list rsyslog
 ```
@@ -93,7 +93,7 @@ apt -a list rsyslog
 
 Открываем порт 514 (TCP и UDP):
 
-```
+```ruby
 nano /etc/rsyslog.conf
 ```
 
@@ -101,7 +101,7 @@ nano /etc/rsyslog.conf
 
 В конец файла /etc/rsyslog.conf добавляем правила приёма сообщений от хостов:
 
-```
+```ruby
 # Add remote logs
 $template RemoteLogs,"/var/log/rsyslog/%HOSTNAME%/%PROGRAMNAME%.log"
 *.* ?RemoteLogs
@@ -115,7 +115,7 @@ $template RemoteLogs,"/var/log/rsyslog/%HOSTNAME%/%PROGRAMNAME%.log"
 
 Далее сохраняем файл и перезапускаем службу rsyslog: systemctl restart rsyslog
 
-```
+```ruby
 systemctl restart rsyslog
 ```
 
@@ -143,25 +143,25 @@ apt install -y nginx
 
 Настраиваем конфигурационный файл сервера
 
-```
+```ruby
 nano /etc/nginx/nginx.conf
 ```
 
 ![image](https://github.com/user-attachments/assets/6635f8f5-2e6a-4baf-b080-bc2dc39b7751)
 
-```
+```ruby
 nginx -t
 ```
 ![image](https://github.com/user-attachments/assets/682bb18c-7b43-4ad2-a33a-86ff5dd3b6db)
 
-```
+```ruby
 systemctl restart nginx
 systemctl status nginx
 ```
 
 ![image](https://github.com/user-attachments/assets/772e9c2f-dd75-49d3-aee7-8174c860ad45)
 
-```
+```ruby
 mv /var/www/html/index.nginx-debian.html  /var/
 ```
 
@@ -177,7 +177,7 @@ mv /var/www/html/index.nginx-debian.html  /var/
 
 ![image](https://github.com/user-attachments/assets/df442d97-98cc-4b33-b4b8-53df643cafba)
 
-```
+```ruby
 cat ./web/nginx_error.log
 ```
 
