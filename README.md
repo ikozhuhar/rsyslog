@@ -113,7 +113,7 @@ $template RemoteLogs,"/var/log/rsyslog/%HOSTNAME%/%PROGRAMNAME%.log"
 
 Данные параметры будут отправлять в папку /var/log/rsyslog логи, которые будут приходить от других серверов. Например, Access-логи nginx от сервера web, будут идти в файл /var/log/rsyslog/web/nginx_access.log
 
-Далее сохраняем файл и перезапускаем службу rsyslog: systemctl restart rsyslog
+Далее сохраняем файл и перезапускаем службу **rsyslog**: `systemctl restart rsyslog`
 
 ```ruby
 systemctl restart rsyslog
